@@ -1,0 +1,50 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+      <div class="col-md-12 col-12" style="display: contents;">
+        <div class="p10 col-md-12 col-12 text-right">
+          <span id="startDatepickerContainer" class="start-datepicker datepicker-container">
+              <ng-datepicker id="datepicker" [(ngModel)]="selectedDate" position="bottom-right"
+                [options]="dateOptions" (click)="currentDate = selectedDate; convertDateToUTCDateAndGetMatchList()"></ng-datepicker>
+          </span>
+          <span>
+            <button *ngIf="!isRefreshDisabled" type="button" class="btn btn-info" (click)="getMatchList(1)">
+              Refresh
+            </button>   
+            <button *ngIf="isRefreshDisabled" type="button" class="btn btn-info">
+                Loading..
+              </button>
+          </span>
+        </div>
+        <div *ngIf="!matchData" class="page-loader">
+          <div class="loader">
+              <span class="dot dot_1"></span>
+              <span class="dot dot_2"></span>
+              <span class="dot dot_3"></span>
+              <span class="dot dot_4"></span>
+          </div>
+      </div>
+      <div class="col-md-12 col-12 text-center no-match p10" *ngIf="matchData && matchData.length === 0">
+          No games in MLB are scheduled on {{selectedDate | date: 'dd/MM/yyyy'}}
+      </div>
+        <div *ngFor="let row of matchData" class="col-md-6 col-12 p10">
+          <div class="match-box" [ngStyle]="{'cursor': row.match_status === 'Live' ? 'pointer' : row.match_status === 'Postponed' ? 'not-allowed' : row.match_status === 'Upcoming' ? 'not-allowed' : 'pointer'}" (click)="row.match_status != 'Postponed' && row.match_status != 'Upcoming' ? getScoreboard(row.match_id) : ''">
+            <div style="width: 100%; display:flex">
+              <div style="width: 45%;">
+                {{row.home_team}}
+              </div>
+              <div class="vs">
+                VS
+              </div>
+              <div style="width: 45%;">
+                {{row.away_team}}
+              </div>
+            </div>
+            <div class="status" [ngStyle]="{'color': row.match_status === 'Live' ? 'green' : row.match_status === 'Postponed' ? '#3817ed' : row.match_status === 'Upcoming' ? 'yellow' : 'red'}">
+                {{row.match_status}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

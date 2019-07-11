@@ -1,1 +1,249 @@
 /* You can add global styles to this file, and also import other style files */
+.full-width-table {
+    width: 100%;
+  }
+  
+  .match-box {
+    padding: 15px;
+    border: 1px solid #00000029;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    font-family: initial !important;
+  }
+  
+  .vs {
+    width: 10%;
+    font-size: 10px;
+    line-height: 30px;
+    padding: 1px 0px;
+  }
+  
+  .status {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  
+  .p10 {
+    padding: 10px !important;
+  }
+  
+  .p15 {
+    padding: 15px !important;
+  }
+
+  .pl10 {
+    padding-left: 10px !important;
+  }
+
+  .navbar-default {
+    background-color: #c5f1fe !important;
+    border-color: #d0f7fe !important;
+}
+
+.navbar-brand {
+  color: #b49c9c !important;
+  font-size: 20px !important;
+  font-weight: bold !important;
+}
+
+/***
+Loader CSS
+*/
+
+.page-loader{ background: #f9f9f9 none repeat scroll 0 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9998;}
+.loader {
+  height: 8px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  top: 50%;
+  width: 44px;
+}
+.dot {
+  background: #ccc none repeat scroll 0 0;
+  border-radius: 50%;
+  display: inline-block;
+  height: 10px;
+  position: absolute;
+  width: 10px;
+}
+.dot_1 {
+  animation: 1.5s linear 0s normal none infinite running animateDot1;
+  background: #f26f29 none repeat scroll 0 0;
+  left: 12px;
+}.dot_2 {
+  animation: 1.5s linear 0.5s normal none infinite running animateDot2;
+  left: 24px;
+}.dot_3 {
+  animation: 1.5s linear 0s normal none infinite running animateDot3;
+  left: 12px;
+}.dot_4 {
+  animation: 1.5s linear 0.5s normal none infinite running animateDot4;
+  left: 24px;
+}
+@keyframes animateDot1 {
+0% {
+  transform: rotate(0deg) translateX(-12px);
+}
+25% {
+  transform: rotate(180deg) translateX(-12px);
+}
+75% {
+  transform: rotate(180deg) translateX(-12px);
+}
+100% {
+  transform: rotate(360deg) translateX(-12px);
+}
+}
+@keyframes animateDot2 {
+0% {
+  transform: rotate(0deg) translateX(-12px);
+}
+25% {
+  transform: rotate(-180deg) translateX(-12px);
+}
+75% {
+  transform: rotate(-180deg) translateX(-12px);
+}
+100% {
+  transform: rotate(-360deg) translateX(-12px);
+}
+}
+@keyframes animateDot3 {
+0% {
+  transform: rotate(0deg) translateX(12px);
+}
+25% {
+  transform: rotate(180deg) translateX(12px);
+}
+75% {
+  transform: rotate(180deg) translateX(12px);
+}
+100% {
+  transform: rotate(360deg) translateX(12px);
+}
+}
+@keyframes animateDot4 {
+0% {
+  transform: rotate(0deg) translateX(12px);
+}
+25% {
+  transform: rotate(-180deg) translateX(12px);
+}
+75% {
+  transform: rotate(-180deg) translateX(12px);
+}
+100% {
+  transform: rotate(-360deg) translateX(12px);
+}
+}
+
+.ngx-datepicker-container .ngx-datepicker-input {
+  width: 100% !important;
+}
+
+.ngx-datepicker-container  .ngx-datepicker-calendar-container  {
+  width: 256px !important;
+  z-index: 9999;
+}
+
+.ngx-datepicker-container  .ngx-datepicker-calendar-container  
+.main-calendar-container  .main-calendar-days  .day-unit , 
+.ngx-datepicker-container  .ngx-datepicker-calendar-container  
+.main-calendar-container  .main-calendar-days  .year-unit , 
+.ngx-datepicker-container  .ngx-datepicker-calendar-container  
+.main-calendar-container  .main-calendar-years  .day-unit , 
+.ngx-datepicker-container  .ngx-datepicker-calendar-container  
+.main-calendar-container  .main-calendar-years  .year-unit  {
+  height: 30px !important;
+}
+
+.btn:focus {
+  box-shadow: none !important;
+}
+
+.btn.disabled, .btn:disabled {
+  opacity: 0.3 !important;
+}
+
+.ngx-datepicker-container  .ngx-datepicker-input  {
+  background: url("./assets/icons/calender.svg") no-repeat !important;
+  background-position: 96% 11px !important;
+  border-bottom: 1px solid #D8D8D8 !important;
+  border-radius: 5px;
+  padding: 8px 7px !important;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  padding: 0px !important; 
+  border: 1px solid #D8D8D8 !important;
+  border-radius: 4px !important;
+  box-shadow: 4px 4px 35px rgba(0, 0, 0, 0.15) !important;
+}
+
+.ngx-datepicker-container .ngx-datepicker-calendar-container  
+.main-calendar-container .main-calendar-days .day-unit , 
+.ngx-datepicker-container .ngx-datepicker-calendar-container  
+.main-calendar-container .main-calendar-days .year-unit , 
+.ngx-datepicker-container .ngx-datepicker-calendar-container  
+.main-calendar-container .main-calendar-years .day-unit , 
+.ngx-datepicker-container .ngx-datepicker-calendar-container  
+.main-calendar-container .main-calendar-years .year-unit  {
+  color: #5B5B5B !important;
+}
+
+.ngx-datepicker-container .ngx-datepicker-calendar-container  
+.main-calendar-container .main-calendar-days .day-unit.is-selected , 
+.ngx-datepicker-container .ngx-datepicker-calendar-container  
+.main-calendar-container .main-calendar-days .year-unit.is-selected , 
+.ngx-datepicker-container .ngx-datepicker-calendar-container  
+.main-calendar-container .main-calendar-years .day-unit.is-selected , 
+.ngx-datepicker-container .ngx-datepicker-calendar-container  
+.main-calendar-container .main-calendar-years .year-unit.is-selected  {
+  background: #3DA5D9 !important;
+  color: #FFFFFF !important;
+}
+
+.ngx-datepicker-container .ngx-datepicker-calendar-container  
+.main-calendar-container .main-calendar-days .day-unit.is-today , 
+.ngx-datepicker-container .ngx-datepicker-calendar-container  
+.main-calendar-container .main-calendar-days .day-unit :hover, 
+.ngx-datepicker-container .ngx-datepicker-calendar-container  
+.main-calendar-container .main-calendar-days .year-unit.is-today , 
+.ngx-datepicker-container .ngx-datepicker-calendar-container  
+.main-calendar-container .main-calendar-days .year-unit :hover, 
+.ngx-datepicker-container .ngx-datepicker-calendar-container  
+.main-calendar-container .main-calendar-years .day-unit.is-today , 
+.ngx-datepicker-container .ngx-datepicker-calendar-container  
+.main-calendar-container .main-calendar-years .day-unit :hover, 
+.ngx-datepicker-container .ngx-datepicker-calendar-container  
+.main-calendar-container .main-calendar-years .year-unit.is-today , 
+.ngx-datepicker-container .ngx-datepicker-calendar-container  
+.main-calendar-container .main-calendar-years .year-unit :hover {
+  border: 1px solid #3DA5D9 !important;
+  background: none !important;
+  color: #5B5B5B !important;
+  box-sizing: border-box !important;
+}
+
+.ngx-datepicker-container .ngx-datepicker-calendar-container  
+.main-calendar-container .main-calendar-days .day-unit.is-prev-month , 
+.ngx-datepicker-container .ngx-datepicker-calendar-container  
+.main-calendar-container .main-calendar-days .year-unit.is-prev-month , 
+.ngx-datepicker-container .ngx-datepicker-calendar-container  
+.main-calendar-container .main-calendar-years .day-unit.is-prev-month , 
+.ngx-datepicker-container .ngx-datepicker-calendar-container  
+.main-calendar-container .main-calendar-years .year-unit.is-prev-month  {
+  color: #D8D8D8 !important;
+}

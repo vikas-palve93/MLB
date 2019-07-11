@@ -1,0 +1,59 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+        <div *ngIf="!liveScore" class="page-loader">
+            <div class="loader">
+                <span class="dot dot_1"></span>
+                <span class="dot dot_2"></span>
+                <span class="dot dot_3"></span>
+                <span class="dot dot_4"></span>
+            </div>
+        </div>
+        <div *ngIf="liveScore" class="p15 col-md-12 col-12">
+          <table class="table table-responsive">
+                      <caption>Live score*</caption>
+                      <thead>
+                        <tr>
+                          <th  scope="col"></th>
+                          <th *ngFor="let score of liveScore.home_team_score; let i = index">{{i+1}}</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">{{liveScore.home_team}}</th>
+                          <td *ngFor="let score of liveScore.home_team_score;">{{score}}</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">{{liveScore.away_team}}</th>
+                          <td *ngFor="let score of liveScore.away_team_score;">{{score}}</td>
+                        </tr>
+                      </tbody>
+            </table>
+          <table class="table ">
+                <caption>RHE Report*</caption>
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">R</th>
+                    <th scope="col">H</th>
+                    <th scope="col">E</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">{{liveScore.home_team}}</th>
+                    <td>{{liveScore.home_team_rhe[0]}}</td>
+                    <td>{{liveScore.home_team_rhe[1]}}</td>
+                    <td>{{liveScore.home_team_rhe[2]}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">{{liveScore.away_team}}</th>
+                    <td>{{liveScore.away_team_rhe[0]}}</td>
+                    <td>{{liveScore.away_team_rhe[1]}}</td>
+                    <td>{{liveScore.away_team_rhe[2]}}</td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+      </div>
+    </div>

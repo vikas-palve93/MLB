@@ -1,0 +1,10 @@
+.start-datepicker {
+    width: auto;
+    float: left;
+}
+
+.no-match {
+    font-size: 25px;
+    font-weight: 400;
+    color: crimson;
+}
